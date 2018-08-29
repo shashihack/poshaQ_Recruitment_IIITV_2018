@@ -2,7 +2,7 @@
 
 Your work will be evaluated primarily on:
 
-* Consistency of coding style (ideally in harmony with our [JavaScript style guide](https://github.com/punkave/best-practices/blob/master/javascript.md))
+* Consistency of coding style (ideally in harmony with our [JavaScript style guide](https://github.com/poshaQ/poshaq-coding-styleguide/tree/master/doc/development)
 * Idiomatic use of `express`,`node`, `mongodb`, and `lodash` (Don't use for loops, `lodash` is mandatory)
 * Absence of **callback hell**
 * Documentation of API end-points
