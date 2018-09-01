@@ -1,4 +1,5 @@
 I have Developed the frontend in two ways:
+
   First One: Using PHP
   Under this I have implemented almost all the task that we are suppose to do both frontend and backend, like
   1. Uploading images in database, fetching and storing the data. 
@@ -24,5 +25,8 @@ I have Developed the frontend in two ways:
     d. Hosted the task on surge
     
     Link to visit react-app:  http://able-respect.surge.sh
+    
+    
+    Under Mockups Folder you will find the UI Design that design before starting the coding.
     
   
