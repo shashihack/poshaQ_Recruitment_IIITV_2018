@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PoshaQ - Frontend Challenge</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Oxygen:400,700" rel="stylesheet">
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery_1.5.2.js"></script>
+	<script type="text/javascript" src="js/vpb_uploader.js"></script>
+	<script src="js/jquery.js" type="text/javascript"></script>
+</head>
+<script type="text/javascript">
+	$(document).ready(function(){
+		loadDoc();
+	});
+
+
+  function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+     document.getElementById("page").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("POST", "show_complete_images.php", true);
+  xhttp.send();
+}
+
+  function loadImageByType(img_type) {
+  var type = img_type;
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+     document.getElementById("page").innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("GET", "load_by_type.php?type=" +type, true);
+  xhttp.send();
+}
+</script>
+<body>
+<div class="wrapper">
+	<section id="main-page">
+		<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 header">
+				<div class="brand-image">
+					<a href="index.html"><h3>PoshaQ</h3></a>
+					<div class="menu">
+						<ul>
+							<a href="front.html" style="color: #F58C1F;"><li>Home &emsp; |</li></a>
+							<a href="index.html" ><li>&emsp; Admin </li></a>
+						</ul>
+					</div>
+				</div>
+		</div>
+		<div class="container">
+			<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12" style="padding-top: 2%;">
+				<div class="col-md-8 col-sm-8 col-xs-6 col-lg-8">
+					<div class="dropdown">
+						<button class="dropbtn">Filter By</button>
+						<div class="dropdown-content">
+						<a><button onclick="loadImageByType('jpg');">JPG</button></a>
+						<a><button onclick="loadImageByType('png');">PNG</button></a>
+						<a><button onclick="loadImageByType('svg');">SVG</button></a>
+						</div>
+						</div>
+				</div>
+				<div class="col-md-4 col-sm-4 col-lg-4 col-xs-6">
+					<div class="view">
+						<a href="front-list.html" style="color: #F58C1F;"><img src="images/list.svg" class="img-responsive"></a>
+						<a href="front.html"><img src="images/thumb.svg" class="img-responsive"></a>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-12 col-lg-12 col-xs-12 thumbnail-upload" id="page">
+			</div>
+
+			
+		</div>
+	</section>
+</div>
+
+
+</body>
+</html>
