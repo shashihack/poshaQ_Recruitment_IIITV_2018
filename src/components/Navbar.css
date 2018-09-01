@@ -1,0 +1,48 @@
+.brand-image {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.brand-image h3{
+	color: #141A23;
+	text-align: left;
+}
+.menu {
+    float: right;
+    position: relative;
+    top: -5vh;
+}
+.menu ul{
+	list-style-type: none;
+	color: #141A23;
+	font-size: 18px;
+	display: inline-flex;
+}
+.menu a{
+	text-decoration: none;
+	color: #141A23;
+}
+.menu a:hover{
+	color: #F58C1F;
+}
+.brand-image a{
+	text-decoration: none;
+	color: #141A23;
+}
+.brand-image a:hover{
+	text-decoration: none;
+	color: #F58C1F;
+}
+.main-box {
+    background-color: #141A23;
+    box-shadow: 5px 3px 14px rgb(0,0,0,0.16);
+    padding: 2%;
+    position: relative;
+    top: 5vh;
+    bottom: 5vh;
+    height: 80vh;
+}
+.main-content{
+	padding: 2%;
+	text-align: center;
+	margin: 0 auto;
+}
